@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    /* Colors */
+        /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+        /* Neutral */
+    --vdark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --vlight-gray: hsl(0, 0%, 98%);
+}
+
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--grayish-blue);
+    text-align: center;
+}
+
+body {
+    background-color: var(--vlight-gray);
+}
+
+header {
+    width: 500px;
+    margin: auto;
+    padding-top: 88px;
+}
+
+h1, h2 {
+    color: var(--vdark-blue);
+}
+
+h1 {
+    font-size: 2.75rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1.bold {
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+
+#cards {
+    margin-top: 66px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 250px 250px;
+    grid-template-areas:
+         "supe team calc"
+         "supe karma calc";
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    margin: 0;
+    position: relative;
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+    padding-left: 32px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+section h2 {
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+section p {
+    margin-top: 12px;
+}
+
+#supervisor {
+    grid-area: supe;
+    background: linear-gradient(to bottom, var(--cyan) 4px, white 4px); 
+}
+
+#team-builder {
+    grid-area: team;
+    background: linear-gradient(to bottom, var(--red) 4px, white 4px); 
+}
+
+#karma {
+    grid-area: karma;
+    background: linear-gradient(to bottom, var(--orange) 4px, white 4px); 
+}
+
+#calculator {
+    grid-area: calc;
+    background: linear-gradient(to bottom, var(--blue) 4px, white 4px); 
+}
+
+.icon {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+
+
+/* Mobile layout */
+@media screen and (max-width: 400px) { 
+
+    h1 {
+        font-size: 1.85rem;
+    }
+
+    header {
+        padding-top: 76px;
+        width: 305px;
+    }
+
+    #cards {
+        margin-top: 52px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "supe"
+            "team"
+            "karma"
+            "calc";
+        row-gap: 25px;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section {
+        margin: 0;
+        position: relative;
+        width: 310px;
+        height: 222px;
+        border-radius: 5px;
+        padding-left: 30px;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    .icon {
+        position: absolute;
+        bottom: 28px;
+        right: 28px;
+        width: 58px;
+    }
+    
+    
+}
+
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    margin-top: 25px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
